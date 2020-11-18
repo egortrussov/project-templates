@@ -1,0 +1,13 @@
+.label.checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    input, span {
+        display: block;
+    }
+
+    input {
+        width: 50px;
+    }
+}

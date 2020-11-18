@@ -1,0 +1,215 @@
+.heading {
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  padding-top: 0;
+}
+
+.heading.md {
+  font-size: 2rem;
+}
+
+.heading.sm {
+  font-size: 1.7rem;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: calc(1rem + 13px);
+}
+
+.input-group .label {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.input-group.mini {
+  max-width: 250px;
+}
+
+.input-group input {
+  background: none !important;
+  border: none;
+  border-bottom: 3px solid #ddd;
+  width: 100%;
+  max-width: 400px;
+  color: var(--main-text-color);
+  padding: .3rem;
+  font-size: 1.1rem;
+}
+
+.input-group input:focus {
+  outline: none;
+}
+
+.input-group input.mini {
+  max-width: 250px;
+  border-bottom-width: 2px;
+}
+
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover,
+.input-group input:-webkit-autofill:focus,
+.input-group input:-webkit-autofill:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background: none !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 30px var(--main-bg-color) inset !important;
+  -webkit-text-fill-color: var(--main-text-color) !important;
+}
+
+.input-group label {
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  background-color: var(--primary-color);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.input-group input.mini + label {
+  height: 2px;
+}
+
+.input-group input:focus + label {
+  width: 100%;
+}
+
+.input-group .error-msg {
+  position: absolute;
+  height: 13px;
+  font-size: 13px;
+  color: var(--danger-color);
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.dropdown {
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  margin-top: .5rem;
+  position: relative;
+}
+
+.dropdown .selected {
+  position: relative;
+  padding: .6rem;
+  border: 3px solid var(--primary-color);
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.dropdown .selected .arrow {
+  position: absolute;
+  left: auto;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.dropdown .selected .arrow .icon {
+  font-size: 14px;
+  color: var(--primary-color);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.dropdown .selected.open .icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.dropdown .collapse {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  max-height: 200px;
+  overflow-y: scroll;
+  z-index: 100;
+}
+
+.dropdown .collapse.open {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.dropdown .collapse .item {
+  border: .5px solid silver;
+  padding: .6rem;
+  background-color: #fff;
+}
+
+.dropdown .collapse .item:hover {
+  background-color: #fff5f5;
+}
+
+.dropdown .collapse .item:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.dropdown .collapse .item:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.button {
+  height: 50px;
+  padding: 0 1.7rem;
+  min-width: 140px;
+  border: 3px solid var(--primary-color);
+  border-radius: .5rem;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.button.cta {
+  background-color: var(--primary-color);
+  color: #fff !important;
+}
+
+.button.disabled {
+  opacity: .7;
+}
+
+.button span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.button:hover {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+/*# sourceMappingURL=style.css.map */

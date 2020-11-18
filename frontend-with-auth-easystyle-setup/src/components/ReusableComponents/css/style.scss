@@ -1,0 +1,196 @@
+.heading {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    padding-top: 0;
+
+    &.md {
+        font-size: 2rem;
+    }
+
+    &.sm {
+        font-size: 1.7rem;
+    }
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: calc(1rem + 13px);
+
+    .label {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    &.mini {
+        max-width: 250px;
+    }
+
+    input {
+        background: none !important;
+        border: none;
+        border-bottom: 3px solid #ddd;
+        width: 100%;
+        max-width: 400px;
+        color: var(--main-text-color);
+        padding: .3rem;
+        font-size: 1.1rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.mini {
+            max-width: 250px;
+            border-bottom-width: 2px;
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active  {
+        box-shadow: none !important;
+        background: none !important;
+        background-color: transparent !important;
+        -webkit-box-shadow: 0 0 0 30px var(--main-bg-color) inset !important;
+        -webkit-text-fill-color: var(--main-text-color) !important;
+    }
+
+    label {
+        position: absolute;
+        width: 0px;
+        height: 3px;
+        background-color: var(--primary-color);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        transition: all .25s ease;
+    }
+
+    input.mini + label {
+        height: 2px;
+    }
+
+    input:focus + label {
+        width: 100%;
+    }
+
+    .error-msg {
+        position: absolute;
+        height: 13px;
+        font-size: 13px;
+        color: var(--danger-color);
+        bottom: 0;
+        transform: translateY(100%);
+    }
+}
+
+.dropdown {
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    margin-top: .5rem;
+    position: relative;
+
+    .selected {
+        position: relative;
+        padding: .6rem;
+        border: 3px solid var(--primary-color);
+        border-radius: 1rem;
+        font-weight: bold;
+
+        .arrow {
+            position: absolute;
+            left: auto;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .icon {
+                font-size: 14px;
+                color: var(--primary-color);
+                transform: rotate(0);
+                transition: transform .3s;
+            }
+        }
+
+        &.open {
+
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .collapse {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        transition: all .2s;
+        transform-origin: 50% 0%;
+        transform: scale(0);
+        max-height: 200px;
+        overflow-y: scroll;
+        z-index: 100;
+
+        &.open {
+            transform: scale(1)
+        }
+        
+        .item {
+            border: .5px solid silver;
+            padding: .6rem;
+            background-color: #fff;
+
+            &:hover {
+                background-color: #fff5f5;
+            }
+            
+            &:first-child {
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+        }
+    }
+}
+
+.button {
+    height: 50px;
+    padding: 0 1.7rem;
+    min-width: 140px;
+    border: 3px solid var(--primary-color);
+    border-radius: .5rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s;
+
+    &.cta {
+        background-color: var(--primary-color);
+        color: #fff !important;
+    }
+
+    &.disabled {
+        opacity: .7;
+    }
+
+    span {
+        // text-transform: lowercase;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, .15);
+    }
+}
